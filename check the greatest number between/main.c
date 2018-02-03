@@ -1,20 +1,20 @@
-#include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 
 int main()
 {
-    int a,b,c;
-    printf("enter any three number :\n");
-    scanf("%d%d%d",&a,&b,&c);
-    greater(&a,&b,&c);
+    int a;
+    printf("enter a number :");
+    scanf("%d",&a);
+    check(&a);
     return 0;
 }
-void greater(int *x,int *y,int *z)
+void check(int *x)
 {
-     if(*x>*y&&*x>*z)
-          printf("%d is the greater number :",*x);
-     else if(*y>*x&&*y>*z)
-          printf("%d is the greater number :",*y);
-     else if(*z>*x&&*z>*y)
-          printf("%d is the greater number :",*z);
+     if(*x==0)
+          printf("this is neutral number ");
+     else if(*x<=0)
+          printf("this number is negetive ");
+     else
+          printf("this is a positive number ");
 }
